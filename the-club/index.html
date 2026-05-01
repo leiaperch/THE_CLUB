@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>THE CLUB — Chapitre 1</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="game-wrapper">
+
+    <!-- Header -->
+    <header id="game-header">
+      <div id="header-left">
+        <div id="game-title">THE CLUB</div>
+        <div id="chapter-title">CHAPITRE UN — SYSTEM BOOT COMPLETE</div>
+        <div id="music-indicator" aria-hidden="true">&#9834; <span id="music-track-name"></span></div>
+      </div>
+      <div id="header-right">
+        <button id="chars-btn" aria-label="Personnages">&#128100;</button>
+        <button id="achievements-btn" aria-label="Succès"><img src="https://img.icons8.com/ios-filled/18/ffffff/trophy.png" alt="" aria-hidden="true" /></button>
+        <button id="settings-btn" aria-label="Paramètres">⚙</button>
+      </div>
+    </header>
+
+    <!-- Story area -->
+    <main id="story-area">
+
+      <!-- Scène : fond atmosphérique + sprite grand format -->
+      <div id="scene-area">
+        <div id="motion-panel" aria-hidden="true">
+          <img id="motion-img" src="" alt="" />
+        </div>
+        <div id="char-portrait" aria-hidden="true">
+          <div id="portrait-left" class="portrait-slot">
+            <img src="" alt="" />
+          </div>
+          <div id="portrait-right" class="portrait-slot">
+            <img src="" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Ecran titre (intro + séparation chapitre) -->
+      <div id="title-screen">
+        <div id="title-epigraph">
+          <p id="title-quote">" HURT "</p>
+          <p id="title-quote-text">"I hurt myself today / To see if I still feel"</p>
+          <p id="title-quote-credit">— Nine Inch Nails – "Hurt" (1994)</p>
+        </div>
+        <div id="title-logo">THE CLUB<span id="title-chapter">CHAPITRE UN</span></div>
+        <button id="title-start-btn">→ COMMENCER</button>
+        <button id="title-resume-btn" style="display:none">→ REPRENDRE</button>
+      </div>
+
+      <!-- Boîte de dialogue -->
+      <div id="dialogue-box">
+        <div id="story-text"></div>
+        <div id="continue-hint" aria-hidden="true">▶ APPUYER SUR ESPACE</div>
+        <div id="conf-hud"></div>
+        <div id="choices-area"></div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- Settings overlay -->
+  <div id="settings-overlay" aria-hidden="true">
+    <div id="settings-panel">
+
+      <div id="settings-header">
+        <span id="settings-title">PARAMÈTRES</span>
+        <button id="settings-close" aria-label="Fermer">✕</button>
+      </div>
+
+      <section class="settings-section">
+        <div class="settings-section-title">SON</div>
+
+        <div class="setting-row">
+          <label for="vol-master">VOLUME GÉNÉRAL</label>
+          <div class="slider-row">
+            <input type="range" id="vol-master" min="0" max="100" value="100" />
+            <span class="vol-val" id="val-master">100</span>
+          </div>
+        </div>
+
+        <div class="setting-row">
+          <label for="vol-music">MUSIQUE</label>
+          <div class="slider-row">
+            <input type="range" id="vol-music" min="0" max="100" value="80" />
+            <span class="vol-val" id="val-music">80</span>
+          </div>
+        </div>
+
+        <div class="setting-row">
+          <label for="vol-sfx">EFFETS SONORES</label>
+          <div class="slider-row">
+            <input type="range" id="vol-sfx" min="0" max="100" value="80" />
+            <span class="vol-val" id="val-sfx">80</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="settings-section">
+        <div class="settings-section-title">ÉPISODES</div>
+        <div id="episode-list"></div>
+      </section>
+
+    </div>
+  </div>
+
+  <div id="conf-flash" aria-hidden="true"></div>
+
+  <!-- Achievements overlay -->
+  <div id="achievements-overlay" aria-hidden="true">
+    <div id="achievements-panel">
+      <div id="achievements-header">
+        <span id="achievements-title"><img src="https://img.icons8.com/ios-filled/16/f5c518/trophy.png" alt="" aria-hidden="true" /> SUCCÈS</span>
+        <div id="achievements-count"></div>
+        <button id="achievements-close" aria-label="Fermer">✕</button>
+      </div>
+      <div id="achievements-list"></div>
+    </div>
+  </div>
+
+  <!-- Xbox-style achievement popup -->
+  <div id="achievement-popup" aria-live="polite" aria-hidden="true">
+    <div id="achievement-popup-icon">🏆</div>
+    <div id="achievement-popup-body">
+      <div id="achievement-popup-label">SUCCÈS DÉBLOQUÉ</div>
+      <div id="achievement-popup-name"></div>
+      <div id="achievement-popup-desc"></div>
+    </div>
+    <div id="achievement-popup-pts"></div>
+  </div>
+
+  <!-- Arbre des décisions (Detroit style) -->
+  <div id="choice-tree-overlay" aria-hidden="true">
+    <button id="choice-tree-close" aria-label="Fermer l'arbre des décisions">✕ FERMER</button>
+    <div id="choice-tree-content"></div>
+  </div>
+
+  <!-- Écran de chargement inter-chapitres -->
+  <div id="loading-overlay" aria-hidden="true">
+    <div id="loading-terminal"></div>
+  </div>
+
+  <!-- Personnages overlay -->
+  <div id="chars-overlay" aria-hidden="true">
+    <div id="chars-panel">
+      <div id="chars-header">
+        <span id="chars-title">&#128100; DOSSIERS PERSONNAGES</span>
+        <button id="chars-close" aria-label="Fermer">✕</button>
+      </div>
+      <div id="chars-list"></div>
+    </div>
+  </div>
+
+  <script src="node_modules/inkjs/dist/ink.js"></script>
+  <script src="choiceTree.js"></script>
+  <script src="chars.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

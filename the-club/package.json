@@ -1,0 +1,17 @@
+{
+  "name": "the-club",
+  "version": "1.0.0",
+  "description": "The Club - Visual Novel (inkjs)",
+  "scripts": {
+    "compile": "node compile.js",
+    "dev": "npx live-server --port=3000 --open=/ --watch=src/,index.html,style.css,main.js",
+    "start": "npm run compile && npm run dev",
+    "build": "npm run compile"
+  },
+  "dependencies": {
+    "inkjs": "^2.3.3"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
