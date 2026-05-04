@@ -17,9 +17,9 @@ for (const { src, out } of FILES) {
     const story = compiler.Compile();
     const json = story.ToJson();
     fs.writeFileSync(out, json, "utf8");
-    console.log(`✅ ${out} généré avec succès !`);
+    console.log(`${out} généré avec succès !`);
   } catch (err) {
-    console.error(`❌ Erreur dans ${label} :`, err.message);
+    console.error(` Erreur dans ${label} :`, err.message);
     hasError = true;
   }
 }

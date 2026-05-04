@@ -1,5 +1,5 @@
-// ============================================================
-// THE CLUB - ÉPISODE 1
+﻿// ============================================================
+// THE CLUB - Ã‰PISODE 1
 // ============================================================
 
 // --- Variables ---
@@ -19,7 +19,7 @@ VAR SETH_ROM = 0
 -> prologue
 
 // ======================================
-// PROLOGUE — Point de vue : le MC
+// PROLOGUE â€” Point de vue : le MC
 // ======================================
 
 === prologue ===
@@ -31,21 +31,21 @@ VAR SETH_ROM = 0
 
 // ---
 
-Hexapolis, la nuit, c'est toujours la même chose.
+Hexapolis, la nuit, c'est toujours la mÃªme chose.
 
-Des néons qui se noient dans la pluie. Des drones Noctis qui font leur ronde au-dessus des blocs résidentiels, silencieux et indifférents. Des gamins qui vendent des bricoles volées au coin des ruelles que les caméras ont oublié de surveiller — ou décidé d'ignorer, c'est selon.
+Des nÃ©ons qui se noient dans la pluie. Des drones Noctis qui font leur ronde au-dessus des blocs rÃ©sidentiels, silencieux et indiffÃ©rents. Des gamins qui vendent des bricoles volÃ©es au coin des ruelles que les camÃ©ras ont oubliÃ© de surveiller â€” ou dÃ©cidÃ© d'ignorer, c'est selon.
 
-Sept ans que je regardais cette ville de loin. Depuis ma planque, depuis ce studio au bord de la mer qui sentait le câble brûlé et le sel industriel, je m'étais convaincu qu'Hexapolis pouvait très bien s'en sortir sans moi.
+Sept ans que je regardais cette ville de loin. Depuis ma planque, depuis ce studio au bord de la mer qui sentait le cÃ¢ble brÃ»lÃ© et le sel industriel, je m'Ã©tais convaincu qu'Hexapolis pouvait trÃ¨s bien s'en sortir sans moi.
 
-Ce soir, je suis revenu. Pas sûr que la ville s'en soit aperçue.
+Ce soir, je suis revenu. Pas sÃ»r que la ville s'en soit aperÃ§ue.
 
-* [J'avais une raison précise de revenir.]
-    Une raison que j'avais retournée dans ma tête pendant les sept heures de trajet en train de nuit. Une raison propre, calibrée, défendable. J'ai mis du temps à comprendre que c'était du foutage de gueule. Les vraies raisons ne ressemblent jamais à ça.
+* [J'avais une raison prÃ©cise de revenir.]
+    Une raison que j'avais retournÃ©e dans ma tÃªte pendant les sept heures de trajet en train de nuit. Une raison propre, calibrÃ©e, dÃ©fendable. J'ai mis du temps Ã  comprendre que c'Ã©tait du foutage de gueule. Les vraies raisons ne ressemblent jamais Ã  Ã§a.
     -> suite_prologue
 
 * [Je suis revenu parce que je n'avais plus le choix.]
-    Je croyais que j'avais trouvé un endroit.. Calme. Personne qui te connaît, personne qui te cherche. Mais Noctis étend ses tentacules et les zones mortes rétrécissent. À un moment, il ne reste plus qu'un endroit où tu peux encore exister sans qu'on te demande de te justifier.
-    Même si cet endroit te déteste.
+    Je croyais que j'avais trouvÃ© un endroit.. Calme. Personne qui te connaÃ®t, personne qui te cherche. Mais Noctis Ã©tend ses tentacules et les zones mortes rÃ©trÃ©cissent. Ã€ un moment, il ne reste plus qu'un endroit oÃ¹ tu peux encore exister sans qu'on te demande de te justifier.
+    MÃªme si cet endroit te dÃ©teste.
     -> suite_prologue
 
 * [Revenir. C'est tout.]
@@ -57,44 +57,44 @@ Ce soir, je suis revenu. Pas sûr que la ville s'en soit aperçue.
 
 Le Club. Ah putain, le club...
 
-Aucun local. Aucune plaque. Aucune existence légale. Noctis aurait adoré qu'on soit assez bêtes pour leur en donner une. Juste un réseau, une poignée de gens qui se retrouvaient là parce qu'il n'y avait nulle part ailleurs où aller. Des inadaptés. Des gens qui avaient décidé, à un moment ou un autre, que le monde tel qu'il tournait n'était pas acceptable. Que les serveurs Noctis pouvaient brûler. Que les flics corrompus méritaient qu'on fasse fuiter leur sale gueule. Que les gamins des blocs méritaient mieux que des drones au-dessus de la tête.
+Aucun local. Aucune plaque. Aucune existence lÃ©gale. Noctis aurait adorÃ© qu'on soit assez bÃªtes pour leur en donner une. Juste un rÃ©seau, une poignÃ©e de gens qui se retrouvaient lÃ  parce qu'il n'y avait nulle part ailleurs oÃ¹ aller. Des inadaptÃ©s. Des gens qui avaient dÃ©cidÃ©, Ã  un moment ou un autre, que le monde tel qu'il tournait n'Ã©tait pas acceptable. Que les serveurs Noctis pouvaient brÃ»ler. Que les flics corrompus mÃ©ritaient qu'on fasse fuiter leur sale gueule. Que les gamins des blocs mÃ©ritaient mieux que des drones au-dessus de la tÃªte.
 
-Des idéalistes, en somme.
+Des idÃ©alistes, en somme.
 
-On avait appelé ça la Poussière. Cela n'avait rien d'une opération officielle, rien dans le Club n'était officiel. Juste un nom qu'on s'était donné pour ce qu'on essayait de faire. Désintégrer le système grain par grain, depuis l'intérieur. Pour tout réduire en poussière, en restant invisibles.
+On avait appelÃ© Ã§a la PoussiÃ¨re. Cela n'avait rien d'une opÃ©ration officielle, rien dans le Club n'Ã©tait officiel. Juste un nom qu'on s'Ã©tait donnÃ© pour ce qu'on essayait de faire. DÃ©sintÃ©grer le systÃ¨me grain par grain, depuis l'intÃ©rieur. Pour tout rÃ©duire en poussiÃ¨re, en restant invisibles.
 
-Ça n'avait pas été invisible du tout.
+Ã‡a n'avait pas Ã©tÃ© invisible du tout.
 
-* ["On avait failli réussir."]
-    C'est ce que je me dis quand j'suis sous medocs. Quand j'oublie comment ça s'est terminé. Hexapolis était à deux doigts de quelque chose, on le sentait tous. A deux doigts de faire changer le monde.
+* ["On avait failli rÃ©ussir."]
+    C'est ce que je me dis quand j'suis sous medocs. Quand j'oublie comment Ã§a s'est terminÃ©. Hexapolis Ã©tait Ã  deux doigts de quelque chose, on le sentait tous. A deux doigts de faire changer le monde.
     -> souvenir
 
 * ["J'ai tout fait foirer."]
-    Pas la peine de chercher midi à quatorze heures. J'ai pris une décision. Elle était mauvaise et des gens en ont payé le prix. Mes amis les premiers.
+    Pas la peine de chercher midi Ã  quatorze heures. J'ai pris une dÃ©cision. Elle Ã©tait mauvaise et des gens en ont payÃ© le prix. Mes amis les premiers.
     -> souvenir
 
-* [Passer à la suite.]
+* [Passer Ã  la suite.]
     ~ silent_count++
     ...
     -> souvenir
 
 === souvenir ===
 
-Leurs visages remontent toujours dans le même ordre, je ne sais pas pourquoi.
+Leurs visages remontent toujours dans le mÃªme ordre, je ne sais pas pourquoi.
 
-Loam en premier — enthousiaste jusqu'à l'inconscience, le genre de gamin qui croit encore que les bonnes intentions protègent des balles et des mecs enragés. Seth et son instinct de survie affilé comme une lame, toujours à sentir les coups avant qu'ils arrivent. Ivy et ses combines à la frontière du génie et de l'arnaque, elle-même incapable de dire où l'un commence et où l'autre finit. Ridge — Ridge qui bossait pour nous et qui bosse pour Noctis maintenant, apparemment. Ça ne m'étonne même pas. Nox, froide et méthodique, celle qui savait exactement ce que chaque décision allait coûter avant qu'on la prenne.
+Loam en premier â€” enthousiaste jusqu'Ã  l'inconscience, le genre de gamin qui croit encore que les bonnes intentions protÃ¨gent des balles et des mecs enragÃ©s. Seth et son instinct de survie affilÃ© comme une lame, toujours Ã  sentir les coups avant qu'ils arrivent. Ivy et ses combines Ã  la frontiÃ¨re du gÃ©nie et de l'arnaque, elle-mÃªme incapable de dire oÃ¹ l'un commence et oÃ¹ l'autre finit. Ridge â€” Ridge qui bossait pour nous et qui bosse pour Noctis maintenant, apparemment. Ã‡a ne m'Ã©tonne mÃªme pas. Nox, froide et mÃ©thodique, celle qui savait exactement ce que chaque dÃ©cision allait coÃ»ter avant qu'on la prenne.
 
 Et Cass.
 
 * [Je me souviens de ce qu'elle m'a dit avant que je parte.]
-    Elle m'avait regardé et dit : "Si tu fais ça, c'est terminé." Je l'ai fait quand même.
+    Elle m'avait regardÃ© et dit : "Si tu fais Ã§a, c'est terminÃ©." Je l'ai fait quand mÃªme.
     -> decision
 
-* [Je me souviens de la nuit où j'ai décidé de trahir le plan.]
-    3h47 du matin. J'ai fait un choix, un choix que je pensais bon pour eux, pour moi, pour Hexapolis. On a tous vu comment les choses ont terminé...
+* [Je me souviens de la nuit oÃ¹ j'ai dÃ©cidÃ© de trahir le plan.]
+    3h47 du matin. J'ai fait un choix, un choix que je pensais bon pour eux, pour moi, pour Hexapolis. On a tous vu comment les choses ont terminÃ©...
     -> decision
 
-* [Je préfère ne pas me souvenir.]
+* [Je prÃ©fÃ¨re ne pas me souvenir.]
     ~ silent_count++
     -> decision
 
@@ -102,27 +102,27 @@ Et Cass.
 
 Alors pourquoi je reviens ?
 
-Hexapolis n'a pas besoin de moi. Le Club non plus, probablement. Noctis s'est renforcé, les quartiers libres ont rétréci, la Poussière est morte dans l'œuf — et la plupart de ceux qui y ont survécu me considèrent comme responsable de son échec. Avec de bonnes raisons.
+Hexapolis n'a pas besoin de moi. Le Club non plus, probablement. Noctis s'est renforcÃ©, les quartiers libres ont rÃ©trÃ©ci, la PoussiÃ¨re est morte dans l'Å“uf â€” et la plupart de ceux qui y ont survÃ©cu me considÃ¨rent comme responsable de son Ã©chec. Avec de bonnes raisons.
 
-* ["Pour réparer ce que j'ai cassé."]
-    Arrogant. Naïf. Je sais. Mais rester loin à regarder les drones Noctis coloniser les écrans d'actu, c'était aussi une forme de lâcheté. Et je commence à en avoir assez de moi-même.
+* ["Pour rÃ©parer ce que j'ai cassÃ©."]
+    Arrogant. NaÃ¯f. Je sais. Mais rester loin Ã  regarder les drones Noctis coloniser les Ã©crans d'actu, c'Ã©tait aussi une forme de lÃ¢chetÃ©. Et je commence Ã  en avoir assez de moi-mÃªme.
     -> acces
 
-* ["Parce qu'il reste quelque chose à finir."]
-    La Poussière n'a pas abouti. Ce qu'elle visait, tout ça est encore là. Quelqu'un doit le finir. Ça peut aussi bien être moi.
+* ["Parce qu'il reste quelque chose Ã  finir."]
+    La PoussiÃ¨re n'a pas abouti. Ce qu'elle visait, tout Ã§a est encore lÃ . Quelqu'un doit le finir. Ã‡a peut aussi bien Ãªtre moi.
     -> acces
 
 * ["Je sais pas encore. On verra."]
-    La seule réponse qui ne soit pas un mensonge complet au final hein ?
+    La seule rÃ©ponse qui ne soit pas un mensonge complet au final hein ?
     -> acces
 
 === acces ===
 
 J'ouvre le client. # bg:bg_ep1_main_thread
 
-L'adresse, je n'ai jamais eu besoin de la chercher. Elle est gravée quelque part entre les habitudes et la honte, dans cette partie du cerveau qui archive les choses qu'on n'arrive pas tout à fait à oublier.
+L'adresse, je n'ai jamais eu besoin de la chercher. Elle est gravÃ©e quelque part entre les habitudes et la honte, dans cette partie du cerveau qui archive les choses qu'on n'arrive pas tout Ã  fait Ã  oublier.
 
-La connexion met trois secondes à s'établir.
+La connexion met trois secondes Ã  s'Ã©tablir.
 
 { silent_count >= 3:
     > ...
@@ -133,7 +133,7 @@ La connexion met trois secondes à s'établir.
 }
 
 > CONNEXION EN COURS...
-> Vérification de l'empreinte...
+> VÃ©rification de l'empreinte...
 > ...
 > ...
 
@@ -142,32 +142,32 @@ La connexion met trois secondes à s'établir.
 === boot_system ===
 
 > SYSTEM BOOT COMPLETE # bg:bg_ep1_main_thread # music:terminal
-> Unité connectée au réseau Club.net
+> UnitÃ© connectÃ©e au rÃ©seau Club.net
 > ENTREE DANS LA SALLE HUB.CLUB
-> Empreinte reconnue : ██████████
-> Autorisation forcée… Accordée.
+> Empreinte reconnue : â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ
+> Autorisation forcÃ©eâ€¦ AccordÃ©e.
 
 > ACCES BLOQUE PAR : cass.or@club.mod
 
 Je savais que ce serait elle.
-Ça ne pouvait être qu'elle.
+Ã‡a ne pouvait Ãªtre qu'elle.
 
 -> cass_entry
 
 // ============================================================
 === cass_entry ===
 
-cass.or : Bordel, j'y crois pas…. C'est vraiment toi ? # bg:bg_ep1_hub_entry # music:club # emotion:cold_anger
+cass.or : Bordel, j'y crois pasâ€¦. C'est vraiment toi ? # bg:bg_ep1_hub_entry # music:club # emotion:cold_anger
 cass.or : T'as une explication ? # emotion:cold_anger
 cass.or : Et ne me fais pas perdre mon temps. # emotion:tired_guarded
-cass.or : Pourquoi t'es là ?? # emotion:cold_anger
+cass.or : Pourquoi t'es lÃ  ?? # emotion:cold_anger
 
-* [Je suis venu voir ce qu'il reste ici. Et le point auquel j'ai foutu la merde.]
+* [Je suis venu voir ce qu'il reste ici. Et le point auquel j'ai foutu la merde. § CASS:+10 § Aveu dÃ©sarmant]
     ~ CASS_CONF += 10
     -> cass_react_1
-* [Peut-être que j'ai juste cliqué au mauvais endroit.]
+* [Peut-Ãªtre que j'ai juste cliquÃ© au mauvais endroit.]
     -> cass_react_1
-* [Ce que je fais ici me regarde.]
+* [Ce que je fais ici me regarde. § CASS:-10 § Mauvaise entrÃ©e en matiÃ¨re]
     ~ CASS_CONF -= 10
     -> cass_react_1
 
@@ -175,28 +175,28 @@ cass.or : Pourquoi t'es là ?? # emotion:cold_anger
 === cass_react_1 ===
 
 { CASS_CONF <= 0:
-    cass.or : Oh bordel, tu me fatigues déjà. # emotion:tired_guarded
+    cass.or : Oh bordel, tu me fatigues dÃ©jÃ . # emotion:tired_guarded
 - else:
-    cass.or : J'espère que je me trompes sur toi. # emotion:hurt_distrust
+    cass.or : J'espÃ¨re que je me trompes sur toi. # emotion:hurt_distrust
 }
 -> cass_scene_2
 
 // ============================================================
 === cass_scene_2 ===
 
-cass.or : Tu nous as planté à Hexapolis, on t'a pas vu pendant quoi… sept ans ? Et tu reviens comme une fleur ? Tu sais dans quel état tu les as tous laissés ? Ou tu t'en fous ? # emotion:hurt_distrust
-cass.or : Ridge ne dit rien. Vale est en vrac. Nox j'vais même pas en parler. # emotion:hurt_distrust
+cass.or : Tu nous as plantÃ© Ã  Hexapolis, on t'a pas vu pendant quoiâ€¦ sept ans ? Et tu reviens comme une fleur ? Tu sais dans quel Ã©tat tu les as tous laissÃ©s ? Ou tu t'en fous ? # emotion:hurt_distrust
+cass.or : Ridge ne dit rien. Vale est en vrac. Nox j'vais mÃªme pas en parler. # emotion:hurt_distrust
 cass.or : Et maintenant, toi. *soupir* # emotion:tired_guarded
-cass.or : J'ai pas le temps pour ces conneries… *silence* # emotion:tired_guarded
+cass.or : J'ai pas le temps pour ces conneriesâ€¦ *silence* # emotion:tired_guarded
 cass.or : Tu veux quoi ? # emotion:cold_anger
 
-* [Voir. Peut-être vous aider, qui sait. Ou tout du moins réparer ce que je vous ai fait.]
+* [Voir. Peut-Ãªtre vous aider, qui sait. Ou tout du moins rÃ©parer ce que je vous ai fait. § CASS:+15 § SincÃ©ritÃ©]
     ~ CASS_CONF += 15
     -> cass_react_2
-* [Je déciderai plus tard.]
+* [Je dÃ©ciderai plus tard. § CASS:+5 § Prudence]
     ~ CASS_CONF += 5
     -> cass_react_2
-* [Je ne veux pas reproduire le passé, Cass, promis.]
+* [Je ne veux pas reproduire le passÃ©, Cass, promis. § CASS:-5 § Promesse creuse]
     ~ CASS_CONF -= 5
     -> cass_react_2
 
@@ -206,24 +206,24 @@ cass.or : Tu veux quoi ? # emotion:cold_anger
 { CASS_CONF > 30:
     cass.or : C'est pas une mauvaise chose. J'imagine. # emotion:tired_guarded
 - else:
-    cass.or : "Très bien." # emotion:dry_sarcasm
-    cass.or : "Alors sers à quelque chose." # emotion:dry_sarcasm
+    cass.or : "TrÃ¨s bien." # emotion:dry_sarcasm
+    cass.or : "Alors sers Ã  quelque chose." # emotion:dry_sarcasm
 }
 -> cass_scene_3
 
 // ============================================================
 === cass_scene_3 ===
 
-cass.or : Au fait, Loam t'a vu le premier, il te sautera dessus à la moindre occasion. Attend toi à un interrogatoire de la part des deux névrosés et probablement à une nouvelle arnaque d'Ivy. # emotion:dry_sarcasm
-cass.or : Quitte à ce que tu reviennes, je préfère te surveiller avant que Seth te fasse entrer d'elle-même… # emotion:tired_guarded
+cass.or : Au fait, Loam t'a vu le premier, il te sautera dessus Ã  la moindre occasion. Attend toi Ã  un interrogatoire de la part des deux nÃ©vrosÃ©s et probablement Ã  une nouvelle arnaque d'Ivy. # emotion:dry_sarcasm
+cass.or : Quitte Ã  ce que tu reviennes, je prÃ©fÃ¨re te surveiller avant que Seth te fasse entrer d'elle-mÃªmeâ€¦ # emotion:tired_guarded
 
-* [Je veux plus m'imposer, Cass.]
+* [Je veux plus m'imposer, Cass. § CASS:+15 § HumilitÃ© convaincante]
     ~ CASS_CONF += 15
     -> cass_scene_4
-* [Je suis pas là pour m'excuser.]
+* [Je suis pas lÃ  pour m'excuser. § CASS:+5 § Direct]
     ~ CASS_CONF += 5
     -> cass_scene_4
-* [Eh beh, je vous ai manqué...]
+* [Eh beh, je vous ai manquÃ©... § CASS:-5 § Ton dÃ©placÃ©]
     ~ CASS_CONF -= 5
     -> cass_scene_4
 
@@ -231,8 +231,8 @@ cass.or : Quitte à ce que tu reviennes, je préfère te surveiller avant que Se
 === cass_scene_4 ===
 
 cass.or : Tu n'oublieras pas de dire bonjour, au passage. # emotion:dry_sarcasm
-cass.or : D'ailleurs, attention à ce que tu dis quand tu vas voir les autres. # emotion:tired_guarded
-cass.or : Personne ici n'a oublié ce que tu as fait. # emotion:cold_anger
+cass.or : D'ailleurs, attention Ã  ce que tu dis quand tu vas voir les autres. # emotion:tired_guarded
+cass.or : Personne ici n'a oubliÃ© ce que tu as fait. # emotion:cold_anger
 
 // [transition]
 -> ivy_intro
@@ -240,45 +240,45 @@ cass.or : Personne ici n'a oublié ce que tu as fait. # emotion:cold_anger
 // ============================================================
 === ivy_intro ===
 
-ivy.m : Ah ouais…. Donc Cass l'a VRAIMENT laissé rentrer. Je pars deux minutes et le diable est de retour en enfer. J'espère que t'as de meilleures offres à m'faire mon chou, parce que depuis le temps j'ai monté ma gamme… #vo:ivy/ivy_1 # emotion:predatory_amusement # bg:bg_ep1_ivy_corner
+ivy.m : Ah ouaisâ€¦. Donc Cass l'a VRAIMENT laissÃ© rentrer. Je pars deux minutes et le diable est de retour en enfer. J'espÃ¨re que t'as de meilleures offres Ã  m'faire mon chou, parce que depuis le temps j'ai montÃ© ma gammeâ€¦ #vo:ivy/ivy_1 # emotion:predatory_amusement # bg:bg_ep1_ivy_corner
 cass.or : Bordel, Ivy...
-ivy.m : Attend, elle t'a laissé rentrer ou t'as forcé le passage ? Fin quoi qu'il en soit, bienvenue chez les fous mon cher ! J'dois bien avoir un petit cadeau de bienvenue… #vo:ivy/ivy_2 # emotion:dangerous_charm
+ivy.m : Attend, elle t'a laissÃ© rentrer ou t'as forcÃ© le passage ? Fin quoi qu'il en soit, bienvenue chez les fous mon cher ! J'dois bien avoir un petit cadeau de bienvenueâ€¦ #vo:ivy/ivy_2 # emotion:dangerous_charm
 
-* [T'as deux minutes. Crache.]
+* [T'as deux minutes. Crache. § IVY:+15 § Ivy apprÃ©cie l'efficacitÃ©]
     ~ IVY_CONF += 15
-    ivy.m : Ok. J'ai récupéré l'un des modules d'écoute de notre incroyaaable gouvernement. Bien évidemment interdit à la circulation, probablement dangereux et plein de données interdites à nos petits yeux de mortels. Autrement dit, une mine d'or pour notre révolutionnaire en carton… #vo:ivy/ivy_3 # emotion:genuine_interest
+    ivy.m : Ok. J'ai rÃ©cupÃ©rÃ© l'un des modules d'Ã©coute de notre incroyaaable gouvernement. Bien Ã©videmment interdit Ã  la circulation, probablement dangereux et plein de donnÃ©es interdites Ã  nos petits yeux de mortels. Autrement dit, une mine d'or pour notre rÃ©volutionnaire en cartonâ€¦ #vo:ivy/ivy_3 # emotion:genuine_interest
     -> ivy_scene_2
-* [T'as 20 secondes. Montre.]
+* [T'as 20 secondes. Montre. § IVY:+5 § IntriguÃ©]
     ~ IVY_CONF += 5
-    ivy.m : Basiquement un bon gros tas de trucs cryptés que Cass voudrait oublier sur ce qu'on a pu faire tout les deux… #vo:ivy/ivy_4 # emotion:predatory_amusement
+    ivy.m : Basiquement un bon gros tas de trucs cryptÃ©s que Cass voudrait oublier sur ce qu'on a pu faire tout les deuxâ€¦ #vo:ivy/ivy_4 # emotion:predatory_amusement
     -> ivy_scene_2
-* [Je passe. J'ai d'autres priorités.]
+* [Je passe. J'ai d'autres prioritÃ©s. § IVY:-15 § CASS:+5 § Ivy s'en souviendra]
     ~ IVY_CONF -= 15
     ~ CASS_CONF += 5
-    ivy.m : Voyez vous ça, monsieur se la joue grand seigneur après avoir entraîné la moitié de la région vers l'auto-destruction. Allez-y messire, je vous déroule le tapis rouge… #vo:ivy/ivy_5 # emotion:offended_disdain
+    ivy.m : Voyez vous Ã§a, monsieur se la joue grand seigneur aprÃ¨s avoir entraÃ®nÃ© la moitiÃ© de la rÃ©gion vers l'auto-destruction. Allez-y messire, je vous dÃ©roule le tapis rougeâ€¦ #vo:ivy/ivy_5 # emotion:offended_disdain
     -> ivy_scene_2
 
 // ============================================================
 === ivy_scene_2 ===
 
-cass.or : T'étais pas obligée de te pointer si c'est juste pour ça, Ivy Marven….
-ivy.m : Oh mais inutile de me réprimander très chère, je venais simplement retrouver un ami. Je vous laisse à vos retrouvailles, je suis certaine que vous avez des centaaaines de choses à vous dire. #vo:ivy/ivy_6 # emotion:dangerous_charm
-ivy.m : *un peu plus bas* Tu sais Cass, tu peux l'ignorer autant que tu veux, tu sais aussi bien que moi que les souvenirs de la Poussière referont surface dès qu'ils sauront qu'il est en vie. *bruit de deco* #vo:ivy/ivy_7 # emotion:genuine_interest
+cass.or : T'Ã©tais pas obligÃ©e de te pointer si c'est juste pour Ã§a, Ivy Marvenâ€¦.
+ivy.m : Oh mais inutile de me rÃ©primander trÃ¨s chÃ¨re, je venais simplement retrouver un ami. Je vous laisse Ã  vos retrouvailles, je suis certaine que vous avez des centaaaines de choses Ã  vous dire. #vo:ivy/ivy_6 # emotion:dangerous_charm
+ivy.m : *un peu plus bas* Tu sais Cass, tu peux l'ignorer autant que tu veux, tu sais aussi bien que moi que les souvenirs de la PoussiÃ¨re referont surface dÃ¨s qu'ils sauront qu'il est en vie. *bruit de deco* #vo:ivy/ivy_7 # emotion:genuine_interest
 cass.or : Putain...
-cass.or : … Bon. J'sais pas ce que tu veux, ni ce que tu fous là, mais de source sûre ça pue. Tout le monde te croyais mort et enterré depuis 7 ans, moi y comprise. *Soupir* Je vais te redonner l'accès… # emotion:hurt_distrust
-cass.or : Démerde toi. # emotion:tired_guarded
+cass.or : â€¦ Bon. J'sais pas ce que tu veux, ni ce que tu fous lÃ , mais de source sÃ»re Ã§a pue. Tout le monde te croyais mort et enterrÃ© depuis 7 ans, moi y comprise. *Soupir* Je vais te redonner l'accÃ¨sâ€¦ # emotion:hurt_distrust
+cass.or : DÃ©merde toi. # emotion:tired_guarded
 
-* [Je suis prêt.]
+* [Je suis prÃªt. § CASS:+10 § LOAM:+10 § Bonne posture]
     ~ CASS_CONF += 10
     ~ LOAM_CONF += 10
     -> main_hub
 * [...]
     -> main_hub
-* [Trop tard pour reculer.]
+* [Trop tard pour reculer. § CASS:+5 § VALE:+5 § Fataliste]
     ~ CASS_CONF += 5
     ~ VALE_CONF += 5
     -> main_hub
-* [Ne rien dire]
+* [Ne rien dire § NND:+1 § Silence comptÃ©]
     ~ LOAM_CONF += 5
     ~ nnd_count += 1
     ~ silent_count += 1
@@ -287,45 +287,45 @@ cass.or : Démerde toi. # emotion:tired_guarded
 // ============================================================
 === main_hub ===
 
-// [Connexion transférée vers : #main-club-thread]
+// [Connexion transfÃ©rÃ©e vers : #main-club-thread]
 > *bruit*
 loaam : ATTEND IL EST VRAIMENT LA ? POUR DE VRAI ? # bg:bg_ep1_hub_entry # emotion:excited_bright #vo:loam/Replique1_Loam
 cass.or : Loam.
-loaam : Oui, oui jme tais. Mais… Fin… Il va… rester cette fois ? # emotion:anxious_hope #vo:loam/Replique2_Loam
+loaam : Oui, oui jme tais. Maisâ€¦ Finâ€¦ Il vaâ€¦ rester cette fois ? # emotion:anxious_hope #vo:loam/Replique2_Loam
 
-* [Bien sûr, Loam.]
+* [Bien sÃ»r, Loam. § LOAM:+10 § Loam rassurÃ©]
     ~ LOAM_CONF += 10
-    loaam : Génial ! Tu m'avais tellement manqué ! J'ai plein de trucs à te montrer ! T'as vu que… j'ai un nouvel avatar ! C'est Nox qui m'a aidé à le faire !! # emotion:excited_bright #vo:loam/Replique3_Loam
+    loaam : GÃ©nial ! Tu m'avais tellement manquÃ© ! J'ai plein de trucs Ã  te montrer ! T'as vu queâ€¦ j'ai un nouvel avatar ! C'est Nox qui m'a aidÃ© Ã  le faire !! # emotion:excited_bright #vo:loam/Replique3_Loam
     -> seth_intro
-* [Je sais pas encore. Faut voir si ça vaut le coup.]
+* [Je sais pas encore. Faut voir si Ã§a vaut le coup. § LOAM:+5 § HonnÃªte]
     ~ LOAM_CONF += 5
-    loaam : J'ai trop parlé hein ? # emotion:anxious_hope #vo:loam/Replique4_Loam
+    loaam : J'ai trop parlÃ© hein ? # emotion:anxious_hope #vo:loam/Replique4_Loam
     -> seth_intro
-* [Reste en dehors de ça, Loam.]
+* [Reste en dehors de Ã§a, Loam. § LOAM:-10 § CASS:-5 § Brutal]
     ~ LOAM_CONF -= 10
     ~ CASS_CONF -= 5
-    loaam : Je… D'accord… # emotion:hurt_withdrawn #vo:loam/Replique5_Loam
+    loaam : Jeâ€¦ D'accordâ€¦ # emotion:hurt_withdrawn #vo:loam/Replique5_Loam
     -> seth_intro
 
 // ============================================================
 === seth_intro ===
 
-// [parasitage audio — bruit — quelqu'un s'incruste]
-seth : aaah voilà, j'me disais aussi que ça sentait le truc pourri. Mais c'est qu'on a un cadavre parmi nous ! Alors, t'es où depuis le temps ? T'as tracé jusqu'à Ulven, vu que c'était ton plan ? C'est comment la vie à la plage pendant qu'on crève dans la merde ? # emotion:hostile_amusement
-cass.or : Seth, tu sais parfaitement que tout ça c'est AUSSI de ta faute. Ne fais pas comme si t'étais clean là dedans.
+// [parasitage audio â€” bruit â€” quelqu'un s'incruste]
+seth : aaah voilÃ , j'me disais aussi que Ã§a sentait le truc pourri. Mais c'est qu'on a un cadavre parmi nous ! Alors, t'es oÃ¹ depuis le temps ? T'as tracÃ© jusqu'Ã  Ulven, vu que c'Ã©tait ton plan ? C'est comment la vie Ã  la plage pendant qu'on crÃ¨ve dans la merde ? # emotion:hostile_amusement
+cass.or : Seth, tu sais parfaitement que tout Ã§a c'est AUSSI de ta faute. Ne fais pas comme si t'Ã©tais clean lÃ  dedans.
 
-* [Ravi de te retrouver, mon pote. T'as pas changé.]
+* [Ravi de te retrouver, mon pote. T'as pas changÃ©. § SETH:+10 § Seth flattÃ©]
     ~ SETH_CONF += 10
-    seth : Ahh jrtrouve bien mon vieux pote là ! toujours lbon nez pour nous pondre les pires idées de l'univers. J'espère que tu t'es foutu en sécurité, parce que c'est toujours un sacré bordel ici. # emotion:dry_grin
+    seth : Ahh jrtrouve bien mon vieux pote lÃ  ! toujours lbon nez pour nous pondre les pires idÃ©es de l'univers. J'espÃ¨re que tu t'es foutu en sÃ©curitÃ©, parce que c'est toujours un sacrÃ© bordel ici. # emotion:dry_grin
     -> ridge_intro
-* [Non j'suis pas à Ulven.]
+* [Non j'suis pas Ã  Ulven. § SETH:+5 § CASS:+5 § Info utile]
     ~ SETH_CONF += 5
     ~ CASS_CONF += 5
-    seth : ah bon ? Donc t'étais encore plus près que je pensais… # emotion:serious_warning
+    seth : ah bon ? Donc t'Ã©tais encore plus prÃ¨s que je pensaisâ€¦ # emotion:serious_warning
     -> ridge_intro
-* [J'ai pas de comptes à te rendre, Seth. Notre deal est terminé.]
+* [J'ai pas de comptes Ã  te rendre, Seth. Notre deal est terminÃ©. § SETH:-10 § Seth hostile]
     ~ SETH_CONF -= 10
-    seth : Ah si si, je suis même presque certain que tu me dois encore un paquet de fric, mon pote. T'es sûr de vouloir aller sur ce terrain ? # emotion:hostile_amusement
+    seth : Ah si si, je suis mÃªme presque certain que tu me dois encore un paquet de fric, mon pote. T'es sÃ»r de vouloir aller sur ce terrain ? # emotion:hostile_amusement
     -> ridge_intro
 
 // ============================================================
@@ -334,23 +334,23 @@ cass.or : Seth, tu sais parfaitement que tout ça c'est AUSSI de ta faute. Ne fa
 
 cass.or : STOP !
 ridge : Cass, c'est quoi ce bordel ? Qu'est-ce que ce connard fait ici ? Il ne t'a pas fait assez de mal ? # emotion:aggressive
-cass.or : Ridge je…
+cass.or : Ridge jeâ€¦
 
-* [Je te demande pardon ?]
+* [Je te demande pardon ? § RIDGE:-5 § SETH:+5 § Escalade]
     ~ RIDGE_CONF -= 5
     ~ SETH_CONF += 5
-    ridge : Connard, tu veux que je le répètes ? # emotion:aggressive
+    ridge : Connard, tu veux que je le rÃ©pÃ¨tes ? # emotion:aggressive
     -> ridge_scene_2
-* [Viens me dire les choses en face, sale traître.]
+* [Viens me dire les choses en face, sale traÃ®tre. § RIDGE:-10 § Ridge renforcÃ©]
     ~ RIDGE_CONF -= 10
-    ridge : Oh tu m'as très bien entendu.. Tu sais j'ai encore des contacts avec les flics. Tiens toi à carreaux, ça pourrait mal finir pour toi. # emotion:contempt
+    ridge : Oh tu m'as trÃ¨s bien entendu.. Tu sais j'ai encore des contacts avec les flics. Tiens toi Ã  carreaux, Ã§a pourrait mal finir pour toi. # emotion:contempt
     -> ridge_scene_2
-* [J'ai changé, Ridge.]
+* [J'ai changÃ©, Ridge. § RIDGE:+10 § CASS:+5 § DÃ©samorÃ§age]
     ~ RIDGE_CONF += 10
     ~ CASS_CONF += 5
     ridge : Et moi jbosse pour Noctis. Me prends pas pour un con. # emotion:bitter_guarded
     -> ridge_scene_2
-* [NE RIEN DIRE]
+* [NE RIEN DIRE § NND:+1 § RIDGE:-5 § Silence hostile]
     ~ nnd_count += 1
     ~ silent_count += 1
     ~ RIDGE_CONF -= 5
@@ -359,25 +359,25 @@ cass.or : Ridge je…
 // ============================================================
 === ridge_scene_2 ===
 
-ridge : J'appelle Nox. Ça serait dommage qu'elle rate la célébration de nos merveilleuses retrouvailles. *Bruit de deco* # emotion:contempt
-cass.or : Je t'avais prévenu.
+ridge : J'appelle Nox. Ã‡a serait dommage qu'elle rate la cÃ©lÃ©bration de nos merveilleuses retrouvailles. *Bruit de deco* # emotion:contempt
+cass.or : Je t'avais prÃ©venu.
 
-* [Je sais. Je suis prêt.]
+* [Je sais. Je suis prÃªt. § RIDGE:+5 § DÃ©sescalade]
     ~ RIDGE_CONF += 5
-    cass.or : Tant mieux. Même si je ne te fais pas confiance, Nox n'a pas ma tolérance.
+    cass.or : Tant mieux. MÃªme si je ne te fais pas confiance, Nox n'a pas ma tolÃ©rance.
     -> nox_intro
-* [Je m'attendais à pire, pour être honnête.]
+* [Je m'attendais Ã  pire, pour Ãªtre honnÃªte. § RIDGE:+3 § Neutre]
     ~ RIDGE_CONF += 3
-    cass.or : Oh ça arrive, ne t'en fais pas…
+    cass.or : Oh Ã§a arrive, ne t'en fais pasâ€¦
     -> nox_intro
-* [C'est pas l'autre nerd qui va me faire peur.]
+* [C'est pas l'autre nerd qui va me faire peur. § NOX:-5 § Arrogance coÃ»teuse]
     ~ NOX_CONF -= 5
-    cass.or : tsss… tu as conscience que ta présence ici ne tient qu'à moi ?
+    cass.or : tsssâ€¦ tu as conscience que ta prÃ©sence ici ne tient qu'Ã  moi ?
     -> nox_intro
-* [NE RIEN DIRE]
+* [NE RIEN DIRE § NND:+1 § Silence comptÃ©]
     ~ nnd_count += 1
     ~ silent_count += 1
-    cass.or : … Je commence à me demander ce que tu fous ici.
+    cass.or : â€¦ Je commence Ã  me demander ce que tu fous ici.
     -> nox_intro
 
 // ============================================================
@@ -385,21 +385,21 @@ cass.or : Je t'avais prévenu.
 ~ NOX_CONF = -30
 
 // *Bruit de connexion*
-nox : Cassandra Orson, me dis pas que c'est toi qui a ramené ce tocard ? Il nous a trahies une première fois, comme les deux autres, pourquoi tu le laisses venir ? # emotion:restrained_fury #vo:nox/NoxReplique1 # bg:bg_ep1_nox_node
-cass.or : Nox, ça fait sept ans, et il peut nous être utile, aussi… peu fiable soit-il.
-nox : Tu veux vraiment te la prendre à l'envers une deuxième fois ? # emotion:suspicious #vo:nox/NoxReplique2
-cass.or : Il dégage au moindre écart.
+nox : Cassandra Orson, me dis pas que c'est toi qui a ramenÃ© ce tocard ? Il nous a trahies une premiÃ¨re fois, comme les deux autres, pourquoi tu le laisses venir ? # emotion:restrained_fury #vo:nox/NoxReplique1 # bg:bg_ep1_nox_node
+cass.or : Nox, Ã§a fait sept ans, et il peut nous Ãªtre utile, aussiâ€¦ peu fiable soit-il.
+nox : Tu veux vraiment te la prendre Ã  l'envers une deuxiÃ¨me fois ? # emotion:suspicious #vo:nox/NoxReplique2
+cass.or : Il dÃ©gage au moindre Ã©cart.
 
-* [Surtout faites comme si je n'étais pas là…]
+* [Surtout faites comme si je n'Ã©tais pas lÃ â€¦ § NOX:+5 § DiscrÃ©tion]
     ~ NOX_CONF += 5
-    nox : Crois moi, j'aurais préféré. # emotion:analytical_cold #vo:nox/NoxReplique3
+    nox : Crois moi, j'aurais prÃ©fÃ©rÃ©. # emotion:analytical_cold #vo:nox/NoxReplique3
     -> nox_scene_2
-* [Ravi de te revoir également, Nox.]
+* [Ravi de te revoir Ã©galement, Nox. § NOX:+3 § Politesse distante]
     ~ NOX_CONF += 3
-    cass.or : Avec encore plus d'entrain, la prochaine fois…
-    nox : Mais tout le plaisir est pour moi voyons… # emotion:disdain #vo:nox/NoxReplique4
+    cass.or : Avec encore plus d'entrain, la prochaine foisâ€¦
+    nox : Mais tout le plaisir est pour moi voyonsâ€¦ # emotion:disdain #vo:nox/NoxReplique4
     -> nox_scene_2
-* [NE RIEN DIRE]
+* [NE RIEN DIRE § NND:+1 § NOX:-5 § âš  Fin secrÃ¨te possible]
     ~ nnd_count += 1
     ~ silent_count += 1
     ~ NOX_CONF -= 5
@@ -413,25 +413,26 @@ cass.or : Il dégage au moindre écart.
 // ============================================================
 === nox_scene_2 ===
 
-nox : bon. Vu que Cass a décidé de te faire à nouveau confiance, ce qui est à mes yeux une bêtise monumentale mais passons, sache que ta première mission pour nous prouver ta bonne volonté, va être de nous dire absolument tout ce que tu sais et tout ce que tu as appris depuis sept ans. # emotion:analytical_cold #vo:nox/NoxReplique7
-nox : Et si tu refuses, j'irai les chercher moi-même de toute façon. Je sais où tu te caches, ne l'oublie pas… # emotion:restrained_fury #vo:nox/NoxReplique8
+nox : bon. Vu que Cass a dÃ©cidÃ© de te faire Ã  nouveau confiance, ce qui est Ã  mes yeux une bÃªtise monumentale mais passons, sache que ta premiÃ¨re mission pour nous prouver ta bonne volontÃ©, va Ãªtre de nous dire absolument tout ce que tu sais et tout ce que tu as appris depuis sept ans. # emotion:analytical_cold #vo:nox/NoxReplique7
+nox : Et si tu refuses, j'irai les chercher moi-mÃªme de toute faÃ§on. Je sais oÃ¹ tu te caches, ne l'oublie pasâ€¦ # emotion:restrained_fury #vo:nox/NoxReplique8
 
-* [Raconter.]
+* [Raconter. § NOX:+10 § CoopÃ©ration]
     ~ NOX_CONF += 10
     -> fin_episode
 
 // ============================================================
 === secret_ending ===
 
-// 🏆 FIN SECRÈTE — "N'a pas passé le CAPTCHA"
-cass.or : Il n'a rien dit depuis qu'il est arrivé. On essaie de nous faire une blague avec un bot à la con je crois bien. *Soupir* # emotion:dry_sarcasm
-nox : Un humour de qualité supérieure… Vire moi ce truc. Et laisse moi ban son IP par pitié. J'ai besoin de cet instant de satisfaction. # emotion:disdain #vo:nox/NoxReplique6
+// ðŸ† FIN SECRÃˆTE â€” "N'a pas passÃ© le CAPTCHA"
+cass.or : Il n'a rien dit depuis qu'il est arrivÃ©. On essaie de nous faire une blague avec un bot Ã  la con je crois bien. *Soupir* # emotion:dry_sarcasm
+nox : Un humour de qualitÃ© supÃ©rieureâ€¦ Vire moi ce truc. Et laisse moi ban son IP par pitiÃ©. J'ai besoin de cet instant de satisfaction. # emotion:disdain #vo:nox/NoxReplique6
 
-Succès débloqué : "N'a pas passé le CAPTCHA" 🏆
+SuccÃ¨s dÃ©bloquÃ© : "N'a pas passÃ© le CAPTCHA" ðŸ†
 -> END
 
 // ============================================================
 === fin_episode ===
 
-// FIN DE L'ÉPISODE 1
+// FIN DE L'Ã‰PISODE 1
 -> END
+
