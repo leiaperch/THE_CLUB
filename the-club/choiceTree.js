@@ -162,112 +162,215 @@ function resetChoiceTree() {
 
 // ---- Constructeurs de nœuds ----
 
-function _ctConnector() {
+/** Connecteur horizontal entre clusters */
+function _ctConnector(color) {
   const el = document.createElement("div");
   el.className = "ct-connector";
+  if (color) {
+    el.style.background = color;
+    el.style.boxShadow  = `0 0 4px ${color}55`;
+  }
   return el;
 }
 
-function _ctDecisionNode(dec, idx) {
-  const meta = EP1_SCENE_LABELS[idx];
-  const node = document.createElement("div");
-  node.className = "ct-node";
+/**
+ * Construit une rangée de choix (arm + box).
+ * taken: true = choix pris (en premier, coloré), false = non pris (grisé)
+ */
+function _ctRow(text, taken, color, effects, isLast) {
+  const row = document.createElement("div");
+  row.className = "ct-row" + (isLast ? " ct-row--last" : "") + (taken ? " ct-row--taken" : " ct-row--unchosen");
 
-  // En-tête
-  const header = document.createElement("div");
-  header.className = "ct-node-header";
+  const arm = document.createElement("div");
+  arm.className = "ct-row-arm";
+  if (taken) arm.style.background = color;
+  row.appendChild(arm);
+
+  const box = document.createElement("div");
+  box.className = "ct-row-box";
+  if (taken) {
+    box.style.borderColor = color;
+    box.style.color       = color;
+    box.style.background  = color + "14";
+  }
+
+  const arrow = document.createElement("span");
+  arrow.className   = "ct-row-arrow";
+  arrow.textContent = taken ? "▶" : "◦";
+  box.appendChild(arrow);
+
+  const txt = document.createElement("span");
+  txt.className   = "ct-row-txt";
+  txt.textContent = text;
+  box.appendChild(txt);
+
+  // Badges uniquement sur le choix pris
+  if (taken && effects && effects.length > 0) {
+    const bdg = document.createElement("div");
+    bdg.className = "ct-badges";
+    effects.forEach(ef => {
+      const b = document.createElement("span");
+      b.className   = "ct-badge badge-" + ef.char.toLowerCase();
+      b.textContent = (ef.val > 0 ? "+" : "") + ef.val + " " + ef.char;
+      bdg.appendChild(b);
+    });
+    box.appendChild(bdg);
+  }
+
+  row.appendChild(box);
+  return row;
+}
+
+/** Cluster de décision : épine verticale + bras → choix (pris en tête, autres dessous) */
+function _ctCluster(dec, idx) {
+  const meta = EP1_SCENE_LABELS[idx];
+
+  const wrap = document.createElement("div");
+  wrap.className = "ct-cluster";
+
+  // ── Header ──
+  const hdr = document.createElement("div");
+  hdr.className = "ct-cluster-hdr";
   const dot = document.createElement("div");
   dot.className = "ct-dot";
   dot.style.background = dec.color;
   dot.style.boxShadow  = `0 0 8px ${dec.color}`;
-  const labelEl = document.createElement("div");
-  labelEl.className = "ct-node-label";
-  labelEl.textContent = dec.label;
-  labelEl.style.color = dec.color;
-  header.appendChild(dot);
-  header.appendChild(labelEl);
-  node.appendChild(header);
+  const lbl = document.createElement("div");
+  lbl.className   = "ct-cluster-lbl";
+  lbl.textContent = dec.label;
+  lbl.style.color = dec.color;
+  hdr.appendChild(dot);
+  hdr.appendChild(lbl);
+  wrap.appendChild(hdr);
 
-  // Liste des choix
-  const list = document.createElement("div");
-  list.className = "ct-choices";
+  // ── Body avec épine ──
+  const body = document.createElement("div");
+  body.className = "ct-cluster-body";
+  body.style.borderColor = dec.color + "55";
 
-  dec.choices.forEach((text, ci) => {
-    const isTaken = ci === dec.takenIdx;
-    const effects = meta?.choiceEffects?.[ci] ?? [];
+  // Choix : taken en tête, les autres dessous
+  const takenItem   = { text: dec.choices[dec.takenIdx], ci: dec.takenIdx, taken: true };
+  const otherItems  = dec.choices
+    .map((text, ci) => ({ text, ci, taken: false }))
+    .filter(c => c.ci !== dec.takenIdx);
+  const sorted = [takenItem, ...otherItems];
 
-    const row = document.createElement("div");
-    row.className = "ct-choice" + (isTaken ? " ct-choice--taken" : " ct-choice--untaken");
-    if (isTaken) {
-      row.style.borderColor = dec.color;
-      row.style.color       = dec.color;
-      row.style.background  = dec.color + "18";
-    }
-
-    const arrow = document.createElement("span");
-    arrow.className  = "ct-arrow";
-    arrow.textContent = isTaken ? "▶" : "○";
-    row.appendChild(arrow);
-
-    const textEl = document.createElement("span");
-    textEl.className  = "ct-choice-text";
-    textEl.textContent = text;
-    row.appendChild(textEl);
-
-    // Badges de stat — uniquement sur le choix pris
-    if (isTaken && effects.length > 0) {
-      const badgesEl = document.createElement("div");
-      badgesEl.className = "ct-badges";
-      effects.forEach(ef => {
-        const badge = document.createElement("span");
-        badge.className  = "ct-badge badge-" + ef.char.toLowerCase();
-        badge.textContent = (ef.val > 0 ? "+" : "") + ef.val + " " + ef.char;
-        badgesEl.appendChild(badge);
-      });
-      row.appendChild(badgesEl);
-    }
-
-    list.appendChild(row);
+  sorted.forEach((item, si) => {
+    const effects = meta?.choiceEffects?.[item.ci] ?? [];
+    const isLast  = si === sorted.length - 1;
+    body.appendChild(_ctRow(item.text, item.taken, dec.color, effects, isLast));
   });
 
-  node.appendChild(list);
-  return node;
+  wrap.appendChild(body);
+  return wrap;
 }
 
-function _ctBranchNode(branchDef) {
+/** Cluster de réaction conditionnelle (branche dashed) */
+function _ctReactionCluster(branchDef) {
   const varVal = branchDef.getVarValue();
-  const node = document.createElement("div");
-  node.className = "ct-branch";
 
-  // En-tête
-  const header = document.createElement("div");
-  header.className = "ct-branch-header";
+  const wrap = document.createElement("div");
+  wrap.className = "ct-cluster ct-cluster--reaction";
+
+  // ── Header ──
+  const hdr = document.createElement("div");
+  hdr.className = "ct-cluster-hdr";
   const dot = document.createElement("div");
   dot.className = "ct-dot ct-dot--small";
-  dot.style.background = branchDef.color;
-  dot.style.boxShadow  = `0 0 5px ${branchDef.color}`;
+  dot.style.background  = "transparent";
+  dot.style.border      = `1.5px dashed ${branchDef.color}`;
+  dot.style.boxSizing   = "border-box";
   const lbl = document.createElement("div");
-  lbl.className  = "ct-branch-label";
+  lbl.className   = "ct-cluster-lbl";
   lbl.textContent = "RÉACTION " + branchDef.charLabel;
-  lbl.style.color = branchDef.color;
-  header.appendChild(dot);
-  header.appendChild(lbl);
-  node.appendChild(header);
+  lbl.style.color = branchDef.color + "cc";
+  hdr.appendChild(dot);
+  hdr.appendChild(lbl);
+  wrap.appendChild(hdr);
 
-  // Lignes de dialogue
-  branchDef.branches.forEach(branch => {
-    const triggered = varVal !== undefined && branch.condition(varVal);
-    const lineEl = document.createElement("div");
-    lineEl.className = "ct-branch-line" + (triggered ? " ct-branch-line--active" : " ct-branch-line--hidden");
-    if (triggered) {
-      lineEl.style.borderColor = branchDef.color;
-      lineEl.style.color       = branchDef.color;
-    }
-    lineEl.textContent = branch.text;
-    node.appendChild(lineEl);
+  // ── Body ──
+  const body = document.createElement("div");
+  body.className = "ct-cluster-body ct-cluster-body--dashed";
+  body.style.borderColor = branchDef.color + "44";
+
+  // Branche déclenchée en tête, non-déclenchées dessous
+  const triggered   = branchDef.branches.find(b => varVal !== undefined && b.condition(varVal));
+  const untriggered = branchDef.branches.filter(b => b !== triggered);
+  const sorted = triggered
+    ? [{ ...triggered, active: true }, ...untriggered.map(b => ({ ...b, active: false }))]
+    : branchDef.branches.map(b => ({ ...b, active: false }));
+
+  sorted.forEach((branch, si) => {
+    const isLast = si === sorted.length - 1;
+    const row = _ctRow(branch.text, branch.active, branchDef.color, [], isLast);
+    body.appendChild(row);
   });
 
-  return node;
+  wrap.appendChild(body);
+  return wrap;
+}
+
+/** Nœud fin secrète — affiché en grisé ou activé selon nnd_count */
+function _ctSecretEndingCluster() {
+  const lastDec   = ep1Decisions[ep1Decisions.length - 1];
+  const nndCount  = lastDec?.varsBefore?.nnd_count ?? 0;
+  const unlocked  = nndCount >= 4;
+  const color     = unlocked ? "#a8a8a8" : "#3a3a4a";
+
+  const wrap = document.createElement("div");
+  wrap.className = "ct-cluster ct-cluster--secret" + (unlocked ? " ct-cluster--secret-unlocked" : "");
+
+  // ── Header ──
+  const hdr = document.createElement("div");
+  hdr.className = "ct-cluster-hdr";
+  const dot = document.createElement("div");
+  dot.className = "ct-dot";
+  dot.style.background = unlocked ? "#a8a8a8" : "transparent";
+  dot.style.border     = unlocked ? "none" : "1px dashed #3a3a4a";
+  dot.style.boxSizing  = "border-box";
+  const lbl = document.createElement("div");
+  lbl.className   = "ct-cluster-lbl";
+  lbl.textContent = unlocked ? "NND — FIN SECRÈTE" : "??? FIN SECRÈTE";
+  lbl.style.color = color;
+  hdr.appendChild(dot);
+  hdr.appendChild(lbl);
+  wrap.appendChild(hdr);
+
+  // ── Body ──
+  const body = document.createElement("div");
+  body.className = "ct-cluster-body";
+  body.style.borderColor = color + "66";
+
+  const row = document.createElement("div");
+  row.className = "ct-row ct-row--last" + (unlocked ? " ct-row--taken" : " ct-row--unchosen");
+
+  const arm = document.createElement("div");
+  arm.className = "ct-row-arm";
+  if (unlocked) arm.style.background = color;
+  row.appendChild(arm);
+
+  const box = document.createElement("div");
+  box.className = "ct-row-box";
+  if (unlocked) {
+    box.style.borderColor = color;
+    box.style.color       = color;
+    box.style.background  = color + "14";
+  }
+
+  const arrow = document.createElement("span");
+  arrow.className   = "ct-row-arrow";
+  arrow.textContent = unlocked ? "▶" : "◆";
+  box.appendChild(arrow);
+
+  const txt = document.createElement("span");
+  txt.className   = "ct-row-txt";
+  txt.textContent = unlocked ? "FIN OBTENUE" : `NND ≥ 4 — (${nndCount}/4)`;
+  box.appendChild(txt);
+
+  row.appendChild(box);
+  body.appendChild(row);
+  wrap.appendChild(body);
+  return wrap;
 }
 
 // ---- Affichage principal ----
@@ -281,17 +384,17 @@ function showChoiceTree() {
 
   if (ep1Decisions.length === 0) {
     const empty = document.createElement("div");
-    empty.className  = "ct-empty";
+    empty.className   = "ct-empty";
     empty.textContent = "Aucune décision enregistrée pour cette session.";
     content.appendChild(empty);
   } else {
     const epTitle = document.createElement("div");
-    epTitle.className  = "ct-episode-title";
+    epTitle.className   = "ct-episode-title";
     epTitle.textContent = "ÉPISODE 1 — CHRONOLOGIE";
     content.appendChild(epTitle);
 
     const epSub = document.createElement("div");
-    epSub.className  = "ct-episode-sub";
+    epSub.className   = "ct-episode-sub";
     epSub.textContent = `${ep1Decisions.length} DÉCISION${ep1Decisions.length > 1 ? "S" : ""} ENREGISTRÉE${ep1Decisions.length > 1 ? "S" : ""}`;
     content.appendChild(epSub);
 
@@ -304,13 +407,19 @@ function showChoiceTree() {
         // Branche conditionnelle entre i-1 et i ?
         const branchDef = EP1_CONDITIONAL_BRANCHES.find(b => b.afterDecision === i - 1);
         if (branchDef) {
-          timeline.appendChild(_ctConnector());
-          timeline.appendChild(_ctBranchNode(branchDef));
+          timeline.appendChild(_ctConnector(branchDef.color + "88"));
+          timeline.appendChild(_ctReactionCluster(branchDef));
         }
-        timeline.appendChild(_ctConnector());
+        timeline.appendChild(_ctConnector(dec.color + "88"));
       }
-      timeline.appendChild(_ctDecisionNode(dec, i));
+      timeline.appendChild(_ctCluster(dec, i));
     });
+
+    // Fin secrète toujours visible en bout de timeline
+    if (ep1Decisions.length > 0) {
+      timeline.appendChild(_ctConnector("#3a3a5a"));
+      timeline.appendChild(_ctSecretEndingCluster());
+    }
 
     content.appendChild(timeline);
   }

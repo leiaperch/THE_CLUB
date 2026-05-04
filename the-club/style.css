@@ -90,6 +90,7 @@ body {
 /* Story area */
 #story-area {
   border: 1px solid var(--border);
+  border-top: none;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -188,9 +189,9 @@ body {
 /* Scène : fond atmosphérique + sprite grand format */
 #scene-area {
   position: relative;
-  flex: 0 0 62vh;
-  min-height: 300px;
-  max-height: 72vh;
+  flex: 0 0 60vh;
+  min-height: 260px;
+  max-height: 68vh;
   background:
     radial-gradient(ellipse 70% 50% at 50% 105%, rgba(123,111,255,0.13) 0%, transparent 65%),
     radial-gradient(ellipse 40% 45% at 80% 90%,  rgba(255,111,176,0.08) 0%, transparent 60%),
@@ -562,9 +563,10 @@ body {
 
 /* Choices */
 #choices-area {
-  padding: 8px 12px 10px;
+  padding: 6px 12px 8px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 5px;
   border-top: 1px solid var(--border);
 }
@@ -574,12 +576,15 @@ body {
   border: 1px solid var(--border);
   color: var(--text);
   font-family: 'Share Tech Mono', monospace;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   text-align: left;
-  padding: 8px 13px;
+  padding: 6px 12px;
   cursor: pointer;
   transition: border-color 0.15s, background 0.15s;
-  line-height: 1.4;
+  line-height: 1.3;
+  flex: 1 1 auto;
+  min-width: 160px;
+  max-width: 100%;
 }
 .choice-btn:hover {
   border-color: var(--accent);
@@ -944,6 +949,8 @@ body::before {
   flex-wrap: wrap;
   gap: 14px;
   align-items: center;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   background: rgba(10, 10, 15, 0.7);
   position: relative;
@@ -1462,10 +1469,10 @@ body::before {
 #choice-tree-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  overflow: hidden;
+  align-items: stretch;
   flex: 1;
   min-height: 0;
+  width: 100%;
 }
 .ct-episode-title {
   font-family: 'Rajdhani', sans-serif;
@@ -1493,8 +1500,7 @@ body::before {
   flex-direction: row;
   align-items: flex-start;
   overflow-x: auto;
-  overflow-y: visible;
-  width: 100%;
+  overflow-y: hidden;
   padding: 12px 40px 40px;
   flex: 1;
   min-height: 0;
