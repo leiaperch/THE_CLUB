@@ -597,62 +597,22 @@ function renderChoices() {
   const choicesEl = document.getElementById("choices-area");
 
   if (story.currentChoices.length > 0) {
-    const choiceTexts = story.currentChoices.map(c => c.text.split(' § ')[0]);
+    const choiceTexts = story.currentChoices.map(c => c.text);
     story.currentChoices.forEach((choice, idx) => {
-      const parts = choice.text.split(' § ');
-      const label = parts[0];
-      const statPattern = /^[A-Z]+:[+\-]?\d+$/;
-      const stats = parts.slice(1).filter(p => statPattern.test(p.trim()));
-      const nonStats = parts.slice(1).filter(p => !statPattern.test(p.trim()));
-      const consequence = nonStats[0] || '';
+      const btn = document.createElement("button");
+      btn.className = "choice-btn";
+      btn.textContent = choice.text;
 
-      const card = document.createElement("button");
-      card.className = "choice-card";
-
-      const labelEl = document.createElement("div");
-      labelEl.className = "choice-card-label";
-      labelEl.textContent = label;
-      card.appendChild(labelEl);
-
-      if (stats.length > 0) {
-        const statsEl = document.createElement("div");
-        statsEl.className = "choice-card-stats";
-        stats.forEach(s => {
-          const colonIdx = s.indexOf(':');
-          const charRaw = s.slice(0, colonIdx);
-          const val = parseInt(s.slice(colonIdx + 1), 10);
-          const badge = document.createElement("span");
-          badge.className = "choice-card-badge badge-" + charRaw.toLowerCase();
-          badge.textContent = (val > 0 ? "+" : "") + val + " " + charRaw;
-          statsEl.appendChild(badge);
-        });
-        card.appendChild(statsEl);
-      }
-
-      if (consequence) {
-        const consEl = document.createElement("div");
-        consEl.className = "choice-card-consequence";
-        consEl.textContent = consequence;
-        card.appendChild(consEl);
-      }
-
-      card.addEventListener("mouseenter", () => playSfx("choice_hover"));
-      card.addEventListener("click", () => {
+      btn.addEventListener("mouseenter", () => playSfx("choice_hover"));
+      btn.addEventListener("click", () => {
         playSfx("choice_select");
-        const allCards = choicesEl.querySelectorAll(".choice-card");
-        allCards.forEach((c, i) => {
-          if (i === idx) c.classList.add("selected");
-          else           c.classList.add("rejected");
-        });
         if (currentEpisodeFile === "story.json" && typeof recordDecision === "function") {
           recordDecision(choiceTexts, idx);
         }
-        setTimeout(() => {
-          story.ChooseChoiceIndex(idx);
-          advance();
-        }, 380);
+        story.ChooseChoiceIndex(idx);
+        advance();
       });
-      choicesEl.appendChild(card);
+      choicesEl.appendChild(btn);
     });
     // Auto-save au point de décision (ep1 uniquement)
     if (currentEpisodeFile === "story.json") saveGame();
